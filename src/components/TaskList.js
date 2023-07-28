@@ -3,13 +3,13 @@ import Task from "./Task";
 
 
 
-function TaskList({ taskData, deleteTask }) {
+function TaskList({ tasks, deleteTask }) {
   
   return (
     <div className="tasks">
       <ul className="taskList">
-        {taskData.map((item) => (
-          <Task task={item} key={item.id} deleteTask={deleteTask} />
+        {tasks.map((item) => (
+          <Task task={item} key={item.id} deleteTask={deleteTask} text={item.text} category={item.category}/>
         ))}
       </ul>
     </div>

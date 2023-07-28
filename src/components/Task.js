@@ -1,7 +1,7 @@
 import React from "react";
 
 
-function Task({ task, deleteTask }) {
+function Task({ task, deleteTask, text, category }) {
 
   function handleDeleteClick(){
     deleteTask(task.id)
@@ -9,8 +9,8 @@ function Task({ task, deleteTask }) {
 
   return (
     <div className="task">
-      <div className="label">{task.category}</div>
-      <div className="text">{task.text}</div>
+      <div className="label">{category}</div>
+      <div className="text">{text}</div>
       <button className="delete" onClick={handleDeleteClick}>X</button>
     </div>
   );

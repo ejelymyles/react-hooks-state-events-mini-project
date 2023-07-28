@@ -41,7 +41,7 @@ function handleTaskSubmission(newTask){
       <h2>My tasks</h2>
       <CategoryFilter categories={CATEGORIES} selectedCategory={selectedCategory} onCategoryClick={handleCategoryClick}/>
       <NewTaskForm categories={CATEGORIES} onTaskFormSubmit={handleTaskSubmission} />
-      <TaskList taskData={filteredTasks} deleteTask={deleteButton}/>
+      <TaskList tasks={filteredTasks} deleteTask={deleteButton}/>
     </div>
   );
 }
